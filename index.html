@@ -1,0 +1,142 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Leigh Clancy - Front-end Web Developer</title>
+
+    <link href="https://fonts.googleapis.com/css?family=Lusitana|Manrope:300,400" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" media="all" href="assets/css/site.css" />
+</head>
+
+<body>
+    <svg aria-hidden="true" style="position: absolute; width: 0; height: 0; overflow: hidden;" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+        <defs>
+            <filter id='shadow' height="120%" width="120%">
+                <feComponentTransfer in="SourceGraphic">
+                    <feFuncR type="discrete" tableValues="0.1"/>
+                    <feFuncG type="discrete" tableValues="0.1"/>
+                    <feFuncB type="discrete" tableValues="0.1"/>
+                </feComponentTransfer>
+                <feGaussianBlur stdDeviation="0"/>
+                <feOffset dx="1" dy="1" result="shadow"/>
+                <feComposite in="SourceGraphic" in2="shadow" operator="over"/>
+            </filter>
+
+            <symbol id="icon-mail" viewBox="0 0 36 36" filter="url(#shadow)">
+                <title>mail2</title>
+                <path d="M26.667 0h-21.333c-2.934 0-5.334 2.4-5.334 5.334v21.332c0 2.936 2.4 5.334 5.334 5.334h21.333c2.934 0 5.333-2.398 5.333-5.334v-21.332c0-2.934-2.399-5.334-5.333-5.334zM26.667 4c0.25 0 0.486 0.073 0.688 0.198l-11.355 9.388-11.355-9.387c0.202-0.125 0.439-0.198 0.689-0.198h21.333zM5.334 28c-0.060 0-0.119-0.005-0.178-0.013l7.051-9.78-0.914-0.914-7.293 7.293v-19.098l12 14.512 12-14.512v19.098l-7.293-7.293-0.914 0.914 7.051 9.78c-0.058 0.008-0.117 0.013-0.177 0.013h-21.333z"></path>
+            </symbol>
+            <symbol id="icon-github" viewBox="0 0 36 36" filter="url(#shadow)">
+                <title>github</title>
+                <path d="M16 0.395c-8.836 0-16 7.163-16 16 0 7.069 4.585 13.067 10.942 15.182 0.8 0.148 1.094-0.347 1.094-0.77 0-0.381-0.015-1.642-0.022-2.979-4.452 0.968-5.391-1.888-5.391-1.888-0.728-1.849-1.776-2.341-1.776-2.341-1.452-0.993 0.11-0.973 0.11-0.973 1.606 0.113 2.452 1.649 2.452 1.649 1.427 2.446 3.743 1.739 4.656 1.33 0.143-1.034 0.558-1.74 1.016-2.14-3.554-0.404-7.29-1.777-7.29-7.907 0-1.747 0.625-3.174 1.649-4.295-0.166-0.403-0.714-2.030 0.155-4.234 0 0 1.344-0.43 4.401 1.64 1.276-0.355 2.645-0.532 4.005-0.539 1.359 0.006 2.729 0.184 4.008 0.539 3.054-2.070 4.395-1.64 4.395-1.64 0.871 2.204 0.323 3.831 0.157 4.234 1.026 1.12 1.647 2.548 1.647 4.295 0 6.145-3.743 7.498-7.306 7.895 0.574 0.497 1.085 1.47 1.085 2.963 0 2.141-0.019 3.864-0.019 4.391 0 0.426 0.288 0.925 1.099 0.768 6.354-2.118 10.933-8.113 10.933-15.18 0-8.837-7.164-16-16-16z"></path>
+            </symbol>
+            <symbol id="icon-linkedin" viewBox="0 0 36 36" filter="url(#shadow)">
+                <title>linkedin</title>
+                <path d="M29 0h-26c-1.65 0-3 1.35-3 3v26c0 1.65 1.35 3 3 3h26c1.65 0 3-1.35 3-3v-26c0-1.65-1.35-3-3-3zM12 26h-4v-14h4v14zM10 10c-1.106 0-2-0.894-2-2s0.894-2 2-2c1.106 0 2 0.894 2 2s-0.894 2-2 2zM26 26h-4v-8c0-1.106-0.894-2-2-2s-2 0.894-2 2v8h-4v-14h4v2.481c0.825-1.131 2.087-2.481 3.5-2.481 2.488 0 4.5 2.238 4.5 5v9z"></path>
+            </symbol>
+        </defs>
+    </svg>
+
+    <header>
+        <div class="mugshot__container">
+            <img src="assets/img/mugshot.png" class="mugshot__image" alt="Leigh Clancy" />
+        </div>
+        <h1>Leigh Clancy</h1>
+        <p class="subtitle">Front-end Web Developer</p>
+
+        <div class="social">
+            <a href="https://www.linkedin.com/in/lclancyau/"><svg viewBox="0 0 36 36" class="icon"><use xlink:href="#icon-linkedin"></use></svg><span class="hidden">Find me on LinkedIn</span></a>
+            <a href="https://github.com/mediumpacer"><svg viewBox="0 0 36 36" class="icon"><use xlink:href="#icon-github"></use></svg><span class="hidden">Find me on Github</span></a>
+        </div>
+
+        <div class="chevron-anim">
+            <span class="chevron"></span>
+            <span class="chevron"></span>
+            <span class="chevron"></span>
+        </div>
+    </header>
+
+    <div class="header-cruft"></div>
+
+    <section>
+        <div class="content">
+            <h2>About me</h2>
+            <p>I'm a Front-end Web Developer who enjoys making websites easier to use. I have high standards regarding accessibility, web standards and browser compatibility issues, am a believer in progressive enhancement and hand-code clean semantic markup wherever possible. Being highly adaptable, I'm able to pick up and work with any architecture or libraries required quickly.</p>
+            <p>My experience allows me to be comfortable working on any scale, either working on small static websites or maintaining / developing a larger architecture holding numerous sites and templates.</p>
+            <p><strong>I'm currently available for full-time or contract work either in London or remotely.</strong></p>
+            <p>Get in touch on <a href="https://www.linkedin.com/in/lclancyau/">LinkedIn</a> or check me out on <a href="https://github.com/mediumpacer">GitHub</a>.</p>
+        </div>
+    </section>
+
+    <section>
+        <div class="content skills">
+            <h2>Skills</h2>
+
+            <h3>Templating</h3>
+            <ul class="skills-list">
+                <li class="skills-list__item">HTML5</li>
+                <li class="skills-list__item">XHTML</li>
+                <li class="skills-list__item">Nunjucks</li>
+                <li class="skills-list__item">Mustache / Handlebars</li>
+                <li class="skills-list__item">PHP</li>
+                <li class="skills-list__item">TWIG</li>
+                <li class="skills-list__item">Velocity</li>
+            </ul>
+
+            <h3>CSS</h3>
+            <ul class="skills-list">
+                <li class="skills-list__item">CSS3</li>
+                <li class="skills-list__item">SASS</li>
+                <li class="skills-list__item">LESS</li>
+                <li class="skills-list__item">BEM</li>
+                <li class="skills-list__item">OOCSS</li>
+            </ul>
+
+            <h3>Javascript</h3>
+            <ul class="skills-list">
+                <li class="skills-list__item">ES5 & ES6</li>
+                <li class="skills-list__item">Vue.js</li>
+                <li class="skills-list__item">Redux</li>
+                <li class="skills-list__item">Backbone.js</li>
+                <li class="skills-list__item">jQuery</li>
+                <li class="skills-list__item">Dojo</li>
+            </ul>
+
+            <h3>Workflow / DCVS</h3>
+            <ul class="skills-list">
+                <li class="skills-list__item">GIT</li>
+                <li class="skills-list__item">Gulp</li>
+                <li class="skills-list__item">Grunt</li>
+            </ul>
+
+        </div>
+    </section>
+
+    <section>
+        <div class="content">
+            <h2>Featured projects</h2>
+
+            <div class="projects">
+                <div class="projects-item">
+                    <h3 class="projects-item__title"><a href="https://www.rugbyworldcup.com/match/final">Rugby World Cup 2019 - Match Centre</a></h3>
+                    <time class="projects-item__date" datetime="2019-09-01T00:00:00Z">September 2019</time>
+                </div>
+
+                <div class="projects-item">
+                    <h3 class="projects-item__title"><a href="https://www.cricketworldcup.com/">Cricket World Cup 2019</a></h3>
+                    <time class="projects-item__date" datetime="2019-05-01T00:00:00Z">May 2019</time>
+                </div>
+
+                <div class="projects-item">
+                    <h3 class="projects-item__title"><a href="https://www.saudiaramco.com/en/who-we-are/overview/our-history">Saudi Aramco - Our History</a></h3>
+                    <time class="projects-item__date" datetime="2018-04-01T00:00:00Z">April 2018</time>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer></footer>
+
+</body>
+</html>

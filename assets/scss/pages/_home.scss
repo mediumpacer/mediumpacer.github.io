@@ -1,0 +1,439 @@
+header,
+footer {
+    background: darken($colour-orange, 5%) url('../img/bg.jpg');
+    background-size: 100% 100%;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+}
+
+header {
+    height: 100vh;
+    text-align: center;
+    padding-top: 35vh;
+    overflow: hidden;
+    position: relative;
+
+    @media (min-width: $bp-tablet) {
+        padding-top: 0;
+    }
+}
+
+footer {
+    background-position: top;
+    background-size: auto;
+    width: 100%;
+    height: 10rem;
+    margin-top: 4rem;
+    position: relative;
+
+    @media (min-width: $bp-tablet) {
+        margin-top: 10rem;
+    }
+
+    &::before,
+    &::after {
+        display: block;
+        content: '';
+        position: absolute;
+        left: 0;
+        width: 100%;
+        height: .8rem;
+    }
+
+    &::before {
+        top: -.8rem;
+        background: rgba($colour-orange, 0.75);
+    }
+
+    &::after {
+        top: -1.6rem;
+        background: rgba($colour-orange, 0.35);
+    }
+}
+
+.profile {
+    background: rgba(0, 0, 0, 0.3);
+}
+
+.mugshot {
+
+    &__container {
+        width: 16rem;
+        z-index: 2;
+        position: relative;
+        margin: 0 auto 1.6rem;
+
+        &::after {
+            position: absolute;
+            width: 15rem;
+            height: 15rem;
+            top: 0;
+            left: 0;
+            display: block;
+            content: '';
+            border-radius: 50%;
+            border: 5px solid $colour-white;
+            box-shadow: 2px 2px 2px rgba(32, 81, 107, 0.75);
+        }
+    }
+
+    &__image {
+        width: 100%;
+    }
+
+
+    @media (min-width: $bp-tablet) {
+        &__container {
+            width: 25rem;
+            margin: 0;
+
+            &::after {
+                width: 24rem;
+                height: 24rem;
+            }
+        }
+
+    }
+}
+
+h1 {
+    font-size: 6rem;
+    font-weight: 400;
+    color: $colour-white;
+    margin: 0 0 0.8rem;
+    letter-spacing: -1px;
+    text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.75);
+    z-index: 2;
+    position: relative;
+
+    @media (min-width: $bp-tablet) {
+        font-size: 9rem;
+        margin: 0;
+
+        &::before,
+        &::after {
+            content: "";
+            display: inline-block;
+            z-index: 100;
+            border-top: 10px solid rgba(255, 120, 0, 0.5);
+            width: 400rem;
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+        }
+
+        &::before {
+            right: calc(100% + 20px);
+        }
+
+        &::after {
+            left: calc(100% + 25px);
+            display: none;
+        }
+    }
+
+    @media (min-width:$bp-desktop) {
+        &::after {
+            display: inline-block;
+        }
+    }
+}
+
+.subtitle {
+    font-size: 2.4rem;
+    color: $colour-white;
+    display: block;
+    font-family: $font-heading;
+    margin: 0 0 2.4rem;
+    z-index: 2;
+    text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.75);
+
+    @media (min-width: $bp-tablet) {
+        font-size: 4rem;
+        margin: 0;
+    }
+}
+
+.social {
+    text-align: center;
+    display: flex;
+    justify-content: center;
+
+    a {
+        text-decoration: none;
+        margin: 0 1.6rem;
+    }
+
+    .icon {
+        fill: $colour-white;
+        width: 4rem;
+        height: 4rem;
+        overflow: visible;
+        transition: all 0.2s ease-in-out;
+
+        &:hover {
+            fill: $colour-yellow;
+        }
+    }
+}
+
+.chevron-anim {
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    left: calc(50% - .6rem);
+    bottom: 5vh;
+    margin-top: .8rem;
+
+    @media (min-width: $bp-tablet) {
+        position: static;
+    }
+}
+
+.chevron {
+    display:block;
+    height: .8rem;
+    animation-name: chevrons-down;
+    animation-duration: 1.4s;
+    animation-iteration-count: infinite;
+    animation-fill-mode: both;
+
+    &::after {
+        border-style: solid;
+        border-width: 0.2em 0.2em 0 0;
+        border-color: $colour-white;
+        content: '';
+        display: inline-block;
+        height: 1.2rem;
+        position: relative;
+        vertical-align: top;
+        width: 1.2rem;
+        transform: rotate(135deg);
+    }
+
+    &:nth-child(2) {
+        animation-delay: .2s;
+    }
+
+    &:nth-child(3) {
+        animation-delay: .4s;
+    }
+}
+
+.header-cruft {
+    width: 100%;
+    height: .8rem;
+    background: rgba($colour-orange, 0.75);
+    margin-bottom: 4rem;
+    position: relative;
+
+    &::after {
+        display: block;
+        content: '';
+        position: absolute;
+        bottom: -.8rem;
+        left: 0;
+        width: 100%;
+        height: .8rem;
+        background: rgba($colour-orange, 0.35);
+    }
+}
+
+h2 {
+    font-size: 3.2rem;
+    font-weight: 400;
+    line-height: 1.3;
+    color: $colour-orange;
+    margin: 0 0 2.4rem;
+    position: relative;
+
+    &::after {
+        display: block;
+        content: '';
+        height: 3px;
+        width: 100%;
+        position: absolute;
+        background: rgba($colour-yellow, 0.75);
+    }
+
+    @media (min-width: $bp-tablet) {
+        font-size: 4.4rem;
+    }
+}
+
+section {
+    padding: 0 1.6rem;
+    margin-bottom: 3.2rem;
+
+    @media (min-width: $bp-tablet) {
+        padding: 0 3.2rem;
+    }
+}
+
+.content {
+    font-size: 1.6rem;
+    line-height: 1.5;
+    text-align: center;
+
+    @media (min-width: $bp-tablet) {
+        font-size: 2rem;
+        text-align: left;
+    }
+}
+
+h3 {
+    margin: 0 0 1.6rem;
+}
+
+.skills {
+
+    h3 {
+        font-size: 2rem;
+        text-decoration: underline;
+
+        @media (min-width: $bp-tablet) {
+            font-size: 2.4rem;
+            text-decoration: none;
+        }
+    }
+
+    &-list {
+        margin: 0 0 3.2rem;
+        padding: 0;
+
+        &__item {
+            display: inline-block;
+
+            &::before {
+                content: '\2022';
+                padding: 0 .5rem 0 0;
+                color: $colour-orange;
+
+                @media (min-width: $bp-tablet) {
+                    padding-left: 1.5rem;
+                }
+            }
+        }
+    }
+}
+
+.projects {
+
+    &-item {
+        margin-bottom: 1.6rem;
+
+        @media (min-width: $bp-tablet) {
+            margin-bottom: 3.2rem;
+        }
+
+        &__title {
+            font-family: $font-body;
+            font-weight: 300;
+            margin-bottom: 0;
+        }
+
+        &__date {
+            color: $colour-grey;
+        }
+    }
+}
+
+// Grid layout for wide display
+@supports (display:grid) {
+
+    header {
+        padding-top: 0;
+        display: grid;
+        grid-template-rows: minmax(0, 35vh) repeat(4, max-content) minmax(1em, 5vh);
+
+        .mugshot__container {
+            grid-row: 2;
+        }
+
+        h1 {
+            grid-row: 3;
+        }
+
+        .subtitle {
+            grid-row: 4;
+        }
+
+        .social {
+            grid-row: 5;
+        }
+    }
+
+    @media (min-width: $bp-tablet) {
+
+        header {
+            grid-template-columns: 1fr 1fr fit-content(61.5rem) 1.5em;
+            //grid-template-rows: 60vh minmax(1em, 12vh) minmax(1em, 8vh) minmax(1em, 5vh) 10vh;
+            grid-template-rows: minmax(30vh, 60vh) max-content max-content minmax(7rem, 7vh) auto 8vh;
+
+            .mugshot__container {
+                grid-column: 3;
+                grid-row: 1 / 1;
+                justify-self: center;
+                align-self: end;
+            }
+
+            h1 {
+                grid-column: 3;
+                grid-row: 2;
+                position: relative;
+                justify-self: center;
+                align-self: center;
+            }
+
+            .subtitle {
+                grid-column: 3;
+                grid-row: 3;
+                justify-self: center;
+            }
+
+            .social {
+                grid-column: 3;
+                grid-row: 4;
+                align-self: end;
+            }
+
+            .chevron-anim {
+                grid-column: 3;
+                grid-row: 6;
+                justify-self: center;
+                position: static;
+            }
+        }
+    }
+
+    @media (min-width: $bp-desktop) {
+        header {
+            grid-template-columns: 1fr minmax(1em, 51rem) fit-content(61rem) 1fr;
+        }
+
+        section {
+            display: grid;
+            grid-template-columns: 1fr max(100rem) 1fr;
+
+            .content {
+                grid-column: 2;
+            }
+        }
+    }
+}
+
+@keyframes chevrons-down {
+    0% {
+      opacity: .1;
+    }
+
+    20% {
+      opacity: .5;
+    }
+
+    100% {
+      opacity: .1;
+    }
+}

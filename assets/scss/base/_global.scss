@@ -1,0 +1,11 @@
+* {
+    box-sizing: border-box;
+}
+
+a {
+    color: $colour-orange;
+
+    &:hover {
+        color: lighten($colour-orange, 20%);
+    }
+}

@@ -1,0 +1,16 @@
+$font-heading: 'Lusitana', 'Times', serif;
+$font-body: 'Manrope', Arial, Helvetica, sans-serif;
+
+html {
+    font-size: 62.5%;
+}
+
+body {
+  font-family: $font-body;
+  font-size: 1.6em;
+  color: $colour-body;
+}
+
+h1, h2, h3 {
+    font-family: $font-heading;
+}
